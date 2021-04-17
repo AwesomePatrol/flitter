@@ -163,12 +163,12 @@ docker build --tag flitter:latest .
 
 Run the image:
 ```bash
-docker run --rm -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $(pwd):/workdir flitter <path to splits>
+docker run --rm -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $(pwd):/workdir flitter flitter <path to splits>
 ```
 
 Example:
 ```bash
-docker run --rm -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $(pwd):/workdir flitter duo.scm
+docker run --rm -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $(pwd):/workdir flitter flitter duo.scm
 ```
 Use `/` to start/split, `*` to quit (when run is finished), `+` and `-` to undo/delete splits.
 
