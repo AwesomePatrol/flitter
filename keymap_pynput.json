@@ -1,0 +1,6 @@
+{
+ "/":"start-split-reset",
+ "+": "undo",
+ "-":"delete-last",
+ "*":"quit"
+}

@@ -166,6 +166,12 @@ Run the image:
 docker run --rm -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $(pwd):/workdir flitter <path to splits>
 ```
 
+Example:
+```bash
+docker run --rm -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $(pwd):/workdir flitter duo.scm
+```
+Use `/` to start/split, `*` to quit (when run is finished), `+` and `-` to undo/delete splits.
+
 ## Contributing
 
 Feel free to make an issue or a pull request!
