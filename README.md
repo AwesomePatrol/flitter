@@ -154,6 +154,18 @@ where "STRING" is not the name of a valid JSON file.
 
 `pynput` can also read input from all mice. Since it emits "right" for both the right mouse button and the right arrow key, you disambiguate the two by prepending "mouse:" for the mouse inputs. This works in general; use `test_pynput.py` to help determine if the button can be captured and the correct name of each button.
 
+### Running through docker
+
+Build the image:
+```bash
+docker build --tag flitter:latest .
+```
+
+Run the image:
+```bash
+docker run --rm -it -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $(pwd):/workdir flitter <path to splits>
+```
+
 ## Contributing
 
 Feel free to make an issue or a pull request!
